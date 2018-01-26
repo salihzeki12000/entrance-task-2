@@ -1,0 +1,23 @@
+.timeline {
+  height: 46px;
+  display: flex;
+  background: #fff;
+  box-shadow: 0 -1px 0 0 #e9ecef;
+
+  &__date {
+    width: 245px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  &__date-cur {
+    font-family: "HelveticaNeue-Medium";
+    font-size: 15px;
+    color: #000000;
+    letter-spacing: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}

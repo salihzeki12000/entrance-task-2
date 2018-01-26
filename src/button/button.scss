@@ -1,0 +1,25 @@
+.button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  background: #007dff;
+  color: #fff;
+  font-size: 13px;
+  font-family: "HelveticaNeue-Medium";
+  cursor: pointer;
+
+  &_hover {
+    background: #0059ff;
+  }
+
+  &_pressed {
+    background-color: #0011fe;
+  }
+
+  &_disabled {
+    background-color: #e9ecef;
+    color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    cursor: default;
+  }
+}

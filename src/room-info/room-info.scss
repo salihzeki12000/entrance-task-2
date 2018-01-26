@@ -1,0 +1,41 @@
+.room-info {
+  width: 220px;
+  height: 44px;
+  padding-top: 4px;
+  box-sizing: border-box;
+
+  &__name {
+    font-size: 15px;
+    color: #000000;
+    line-height: 17px;
+    margin-bottom: 2px;
+    font-family: "HelveticaNeue-Medium";
+  }
+
+  &__capacity {
+    font-size: 13px;
+    color: #000000;
+    line-height: 17px;
+    font-family: "HelveticaNeue";
+  }
+
+  &_hover & {
+    &__name {
+      color: #0070e0;
+      font-family: "HelveticaNeue-Bold";
+    }
+  }
+
+  &_pressed & {
+    &__name {
+      color: #1d54fe;
+      font-family: "HelveticaNeue-Bold";
+    }
+  }
+
+  &_disabled & {
+    &__name {
+      color: #858e98;
+    }
+  }
+}
