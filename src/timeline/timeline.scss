@@ -1,3 +1,5 @@
+@import "../calc.scss";
+
 .timeline {
   height: 46px;
   display: flex;
@@ -10,14 +12,39 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
+
+    &-cur {
+      font-family: "HelveticaNeue-Medium";
+      font-size: 15px;
+      color: #000000;
+      letter-spacing: 0;
+      flex-grow: 1;
+      text-align: center;
+    }
   }
 
-  &__date-cur {
-    font-family: "HelveticaNeue-Medium";
-    font-size: 15px;
-    color: #000000;
-    letter-spacing: 0;
+  &__time {
     flex-grow: 1;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
+    
+    &-h {
+      position: absolute;
+      font-family: "HelveticaNeue-Bold";
+      font-size: 11px;
+      color: #252525;
+      letter-spacing: 0.4px;
+      width: 49px;
+      line-height: 13px;
+      text-align: center;
+      margin-left: -24px;
+      top: 17px;
+
+      @for $i from 8 through 23 {
+        &_#{$i} {
+          @include start($i, 0);
+        }
+      }
+    }
   }
 }
