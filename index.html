@@ -18,59 +18,187 @@
         <button class="button header__button">Создать встречу</button>
     </header>
 
-    <div class="timeline">
-        <div class="timeline__date">
-            <button class="timeline__date-prev round-button">
-                <i class="icon-arrow-left"></i>
-            </button>
-            <span class="timeline__date-cur">14 дек · Сегодня</span>
-            <button class="timeline__date-next round-button">
-                <i class="icon-arrow-right"></i>
-            </button>
+    <div class="meetings">
+        <div class="meetings__timeline">
+            <div class="meetings__timeline-date">
+                <button class="round-button">
+                    <i class="icon-arrow-left"></i>
+                </button>
+                <span class="meetings__timeline-date-curent">14 дек · Сегодня</span>
+                <button class="round-button">
+                    <i class="icon-arrow-right"></i>
+                </button>
+            </div>
+            <div class="meetings__timeline-time">
+                <span class="meetings__timeline-time-label time_8-00">8:00</span>
+                <span class="meetings__timeline-time-label time_9-00">9</span>
+                <span class="meetings__timeline-time-label time_10-00">10</span>
+                <span class="meetings__timeline-time-label time_11-00">11</span>
+                <span class="meetings__timeline-time-label time_12-00">12</span>
+                <span class="meetings__timeline-time-label time_13-00">13</span>
+                <span class="meetings__timeline-time-label time_14-00">14</span>
+                <span class="meetings__timeline-time-label time_15-00">15</span>
+                <span class="meetings__timeline-time-label time_16-00">16</span>
+                <span class="meetings__timeline-time-label time_17-00">17</span>
+                <span class="meetings__timeline-time-label time_18-00">18</span>
+                <span class="meetings__timeline-time-label time_19-00">19</span>
+                <span class="meetings__timeline-time-label time_20-00">20</span>
+                <span class="meetings__timeline-time-label time_21-00">21</span>
+                <span class="meetings__timeline-time-label time_22-00">22</span>
+                <span class="meetings__timeline-time-label time_23-00">23</span>
+            </div>
         </div>
-        <div class="timeline__time">
-            <span class="timeline__time-h timeline__time-h_8">8:00</span>
-            <span class="timeline__time-h timeline__time-h_9">9</span>
-            <span class="timeline__time-h timeline__time-h_10">10</span>
-            <span class="timeline__time-h timeline__time-h_11">11</span>
-            <span class="timeline__time-h timeline__time-h_12">12</span>
-            <span class="timeline__time-h timeline__time-h_13">13</span>
-            <span class="timeline__time-h timeline__time-h_14">14</span>
-            <span class="timeline__time-h timeline__time-h_15">15</span>
-            <span class="timeline__time-h timeline__time-h_16">16</span>
-            <span class="timeline__time-h timeline__time-h_17">17</span>
-            <span class="timeline__time-h timeline__time-h_18">18</span>
-            <span class="timeline__time-h timeline__time-h_19">19</span>
-            <span class="timeline__time-h timeline__time-h_20">20</span>
-            <span class="timeline__time-h timeline__time-h_21">21</span>
-            <span class="timeline__time-h timeline__time-h_22">22</span>
-            <span class="timeline__time-h timeline__time-h_23">23</span>
+        <div class="meetings__background">
+            <div class="meetings__background-left"></div>
+            <div class="meetings__background-right"></div>
+        </div>
+        <div class="meetings__grid">
+            <div class="meetings__grid-line time_8-00"></div>
+            <div class="meetings__grid-line time_9-00"></div>
+            <div class="meetings__grid-line time_10-00"></div>
+            <div class="meetings__grid-line time_11-00"></div>
+            <div class="meetings__grid-line time_12-00"></div>
+            <div class="meetings__grid-line time_13-00"></div>
+            <div class="meetings__grid-line time_14-00"></div>
+            <div class="meetings__grid-line time_15-00"></div>
+            <div class="meetings__grid-line time_16-00"></div>
+            <div class="meetings__grid-line time_17-00"></div>
+            <div class="meetings__grid-line time_18-00"></div>
+            <div class="meetings__grid-line time_19-00"></div>
+            <div class="meetings__grid-line time_20-00"></div>
+            <div class="meetings__grid-line time_21-00"></div>
+            <div class="meetings__grid-line time_22-00"></div>
+            <div class="meetings__grid-line time_23-00"></div>
+            <div class="meetings__grid-now time_11-05">
+                <span class="meetings__grid-now-label">11:05</span>
+            </div>
+        </div>
+        <div class="meetings__body">
+            <div class="meetings__body-floor">
+                <div class="meetings__body-floor-name">7 этаж</div>
+                <div class="meetings__body-floor-room meetings__body-floor-room_occupied">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Ржавый фред
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            3—6 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+                <div class="meetings__body-floor-room">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Прачечная
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            до 10 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+                <div class="meetings__body-floor-room meetings__body-floor-room_selected">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Жёлтый дом
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            до 10 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+                <div class="meetings__body-floor-room meetings__body-floor-room_occupied">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Оранжевый тюльпан
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            до 10 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+            </div>
+            <div class="meetings__body-floor">
+                <div class="meetings__body-floor-name">6 этаж</div>
+                <div class="meetings__body-floor-room">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Джокер
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            3—6 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+                <div class="meetings__body-floor-room">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Мариванна
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            3—6 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+                <div class="meetings__body-floor-room">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Тонкий Боб
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            3—6 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+                <div class="meetings__body-floor-room">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Чёрная вдова
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            3—6 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+                <div class="meetings__body-floor-room">
+                    <div class="meetings__body-floor-room-info">
+                        <div class="meetings__body-floor-room-info-name">
+                            Белорусский ликёр
+                        </div>
+                        <div class="meetings__body-floor-room-info-capacity">
+                            3—6 человек
+                        </div>
+                    </div>
+                    <div class="meetings__body-floor-room-events">
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="rooms-events">
-        <div class="rooms-events__floor">
-            <div class="rooms-events__floor-name">
-                7 этаж
-            </div>
-            <div class="rooms-events__floor-room">
-                Ржавый Фред
-            </div>
-            <div class="rooms-events__floor-room">
-                Прачечная
-            </div>
-            <div class="rooms-events__floor-room">
-                Жёлтый дом
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
 </body>
 
 </html>

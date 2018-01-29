@@ -1,0 +1,171 @@
+@import "../common.scss";
+
+$timeline-height: 46px;
+$left-width: 245px;
+
+.meetings {
+  height: calc(100vh - #{$header-height});
+  position: relative;
+
+  &__timeline {
+    height: $timeline-height;
+    background: #fff;
+    box-shadow: 0 -1px 0 0 #e9ecef;
+    display: flex;
+
+    &-date {
+      width: $left-width;
+      padding: 0 24px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+
+      &-curent {
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+
+    &-time {
+      flex-grow: 1;
+      background: #fff;
+      position: relative;
+      overflow: hidden;
+
+      &-label {
+        position: absolute;
+        width: 49px;
+        line-height: 13px;
+        font-size: 11px;
+        text-align: center;
+        margin-left: -24px;
+        top: 17px;
+      }
+    }
+  }
+
+  &__background {
+    position: absolute;
+    top: $timeline-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    box-shadow: 0 -1px 0 0 #e9ecef;
+    z-index: 100;
+
+    &-left {
+      background: #fff;
+      width: $left-width;
+      box-shadow: inset -1px 0 0 0 #e9ecef;
+    }
+
+    &-right {
+      background: #f6f7f9;
+      flex-grow: 1;
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: $timeline-height;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 101;
+
+    &-floor {
+      margin-top: 21px;
+      margin-bottom: 3px;
+
+      &-name {
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 13px;
+        color: #858e98;
+        width: $left-width;
+        padding-left: 25px;
+        box-sizing: border-box;
+        margin-bottom: 4px;
+      }
+      &-room {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+
+        &_selected & {
+          &-info-name {
+            color: rgba(0, 112, 224, 1);
+          }
+        }
+
+        &_occupied & {
+          &-info {
+            color: #858e98;
+          }
+        }
+
+        &-info {
+          width: $left-width;
+          padding-left: 25px;
+          box-sizing: border-box;
+          color: #000;
+
+          &-name {
+            font-size: 15px;
+            line-height: 17px;
+            margin-top: 4px;
+          }
+          &-capacity {
+            font-size: 13px;
+            line-height: 17px;
+            margin-bottom: 4px;
+          }
+        }
+        &-events {
+          flex-grow: 1;
+          height: 28px;
+        }
+      }
+    }
+  }
+
+  &__grid {
+    position: absolute;
+    top: $timeline-height;
+    left: $left-width;
+    bottom: 0;
+    right: 0;
+    z-index: 102;
+
+    &-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: rgba(19, 100, 205, 0.1);
+    }
+
+    &-now {
+      position: absolute;
+      top: -32px;
+      bottom: 0;
+      width: 1px;
+      background: rgba(0, 125, 255, 1);
+
+      &-label {
+        position: absolute;
+        background: rgba(0, 125, 255, 1);
+        color: #fff;
+        width: 49px;
+        text-align: center;
+        font-size: 11px;
+        line-height: 13px;
+        margin-left: -24px;
+        border-radius: 100px;
+        padding: 3px 0;
+      }
+    }
+  }
+}
