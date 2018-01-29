@@ -140,8 +140,13 @@ $left-width: 245px;
           &-event {
             position: absolute;
             background: rgba(213, 223, 233, 1);
+            border: none;
             top: 0;
             bottom: 0;
+
+            &_selected {
+              background: rgba(153,169,185,1);
+            }
           }
 
           &-empty {
