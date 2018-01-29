@@ -1,5 +1,39 @@
-@import "./calc.scss";
+$start-h: 7;
+$start-m: 30;
+$end-h: 23;
+$end-m: 15;
 
+$total-m: ($end-h * 60 + $end-m) - ($start-h * 60 + $start-m);
+@function timeToRelativePos($h, $m) {
+  $cur-m: ($h * 60 + $m) - ($start-h * 60 + $start-m);
+  @return $cur-m / $total-m;
+}
+
+@function addLeadingZero($v) {
+  @if $v < 10 {
+    @return "0" + $v;
+  } @else {
+    @return $v;
+  }
+}
+
+@function formatTime($h, $m) {
+  @return #{addLeadingZero($h)}-#{addLeadingZero($m)};
+}
+
+@mixin from($h, $m) {
+  left: percentage(timeToRelativePos($h, $m));
+}
+
+@mixin to($h, $m) {
+  right: percentage(1 - timeToRelativePos($h, $m));
+}
+
+/* 
+  Генеририуем классы для позиционирования на временной шкале
+  В продакшене положение будет рассчитываться в javascript-е, поэтому
+  это все можно будет убрать
+*/
 @for $h from 7 through 23 {
   @for $m from 0 to 59 {
     .from_#{formatTime($h, $m)} {
