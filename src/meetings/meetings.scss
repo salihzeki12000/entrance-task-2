@@ -6,7 +6,7 @@ $left-width: 245px;
 .meetings {
   height: calc(100vh - #{$header-height});
   position: relative;
-  font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
+  font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
 
   &__timeline {
     height: $timeline-height;
@@ -102,7 +102,8 @@ $left-width: 245px;
         align-items: center;
         margin-bottom: 8px;
 
-        &_selected & {
+        //&_selected &
+        &:hover & {
           &-info-name {
             color: rgba(0, 112, 224, 1);
           }
@@ -145,7 +146,7 @@ $left-width: 245px;
             bottom: 0;
 
             &_selected {
-              background: rgba(153,169,185,1);
+              background: rgba(153, 169, 185, 1);
             }
           }
 
@@ -154,12 +155,48 @@ $left-width: 245px;
             background: #fff;
             top: 0;
             bottom: 0;
+
+            &-add {
+              display: none;
+              width: 57px;
+              height: 28px;
+              border: none;
+              border-radius: 2px;
+              background: rgba(43, 80, 253, 1);
+              position: absolute;
+              z-index: 103;
+
+              &::after {
+                content: "";
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background: linear-gradient(
+                    to bottom,
+                    transparent 45%,
+                    #fff 45%,
+                    #fff 55%,
+                    transparent 55%
+                  ),
+                  linear-gradient(
+                    to right,
+                    transparent 45%,
+                    #fff 45%,
+                    #fff 55%,
+                    transparent 55%
+                  );
+              }
+            }
+            &:hover & {
+              &-add {
+                display: block;
+              }
+            }
           }
         }
       }
     }
   }
-
   &__grid {
     position: absolute;
     top: $timeline-height;
@@ -168,7 +205,6 @@ $left-width: 245px;
     right: 0;
     z-index: 102;
     pointer-events: none;
-
     &-line {
       position: absolute;
       top: 0;
@@ -176,14 +212,12 @@ $left-width: 245px;
       width: 1px;
       background: rgba(19, 100, 205, 0.1);
     }
-
     &-now {
       position: absolute;
       top: -32px;
       bottom: 0;
       width: 1px;
       background: rgba(0, 125, 255, 1);
-
       &-label {
         position: absolute;
         background: rgba(0, 125, 255, 1);
