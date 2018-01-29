@@ -1,11 +1,12 @@
 @import "./calc.scss";
 
-@for $i from 8 through 23 {
-  .time_#{$i}-00 {
-    @include start($i, 0);
+@for $h from 7 through 23 {
+  @for $m from 0 to 59 {
+    .from_#{formatTime($h, $m)} {
+      @include from($h, $m);
+    }
+    .to_#{formatTime($h, $m)} {
+      @include to($h, $m);
+    }
   }
-}
-
-.time_11-05 {
-  @include start(11, 05);
 }

@@ -6,6 +6,7 @@ $left-width: 245px;
 .meetings {
   height: calc(100vh - #{$header-height});
   position: relative;
+  font-family: HelveticaNeue,Helvetica,Arial,sans-serif;
 
   &__timeline {
     height: $timeline-height;
@@ -23,6 +24,7 @@ $left-width: 245px;
       &-curent {
         flex-grow: 1;
         text-align: center;
+        font-weight: bold;
       }
     }
 
@@ -37,9 +39,14 @@ $left-width: 245px;
         width: 49px;
         line-height: 13px;
         font-size: 11px;
+        font-weight: bold;
         text-align: center;
         margin-left: -24px;
         top: 17px;
+
+        &_past {
+          color: rgba(133, 142, 152, 1);
+        }
       }
     }
   }
@@ -82,6 +89,7 @@ $left-width: 245px;
       &-name {
         text-transform: uppercase;
         font-size: 11px;
+        font-weight: bold;
         line-height: 13px;
         color: #858e98;
         width: $left-width;
@@ -114,6 +122,7 @@ $left-width: 245px;
 
           &-name {
             font-size: 15px;
+            font-weight: bold;
             line-height: 17px;
             margin-top: 4px;
           }
@@ -126,6 +135,21 @@ $left-width: 245px;
         &-events {
           flex-grow: 1;
           height: 28px;
+          position: relative;
+
+          &-event {
+            position: absolute;
+            background: rgba(213, 223, 233, 1);
+            top: 0;
+            bottom: 0;
+          }
+
+          &-empty {
+            position: absolute;
+            background: #fff;
+            top: 0;
+            bottom: 0;
+          }
         }
       }
     }
@@ -138,6 +162,7 @@ $left-width: 245px;
     bottom: 0;
     right: 0;
     z-index: 102;
+    pointer-events: none;
 
     &-line {
       position: absolute;
@@ -161,6 +186,7 @@ $left-width: 245px;
         width: 49px;
         text-align: center;
         font-size: 11px;
+        font-weight: bold;
         line-height: 13px;
         margin-left: -24px;
         border-radius: 100px;
