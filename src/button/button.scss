@@ -8,18 +8,17 @@
   font-family: HelveticaNeue,Helvetica,Arial,sans-serif;;
   cursor: pointer;
 
-  &_hover {
+  &:hover {
     background: #0059ff;
   }
 
-  &_pressed {
+  &:active {
     background-color: #0011fe;
   }
 
-  &_disabled {
+  &:disabled {
     background-color: #e9ecef;
     color: rgba(0, 0, 0, 0.2);
-    pointer-events: none;
     cursor: default;
   }
 }

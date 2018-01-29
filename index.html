@@ -73,7 +73,11 @@
             <div class="meetings__grid-now from_11-05">
                 <span class="meetings__grid-now-label">11:05</span>
             </div>
+            <div class="meetings__tooltip">
+                hfdskjlhfgdsklgl kldsngfdkls ngklfdsng
+            </div>
         </div>
+
         <div class="meetings__body">
             <div class="meetings__body-floor">
                 <div class="meetings__body-floor-name">7 этаж</div>
@@ -282,6 +286,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+        (function iife() {
+            const tooltip = document.getElementsByClassName("meetings__tooltip")[0];
+            const events = document.getElementsByClassName("meetings__body-floor-room-events-event");
+            [].forEach.call(events, function eachEvent(e) {
+                e.onclick = function onClick(evt) {
+                    const style = window.getComputedStyle(evt.target);
+                    tooltip.style.left = style.left;
+                    tooltip.style.top = style.top;
+                };
+            });
+        })()
+    </script>
 </body>
 
 </html>
