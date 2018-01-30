@@ -156,7 +156,7 @@ $left-width: 245px;
             background: #fff;
             top: 0;
             bottom: 0;
-            
+
             &-add {
               display: none;
               width: 57px;
@@ -207,7 +207,6 @@ $left-width: 245px;
     right: 0;
     z-index: 102;
     pointer-events: none;
-    
     &-line {
       position: absolute;
       top: 0;
@@ -215,14 +214,12 @@ $left-width: 245px;
       width: 1px;
       background: rgba(19, 100, 205, 0.1);
     }
-    
     &-now {
       position: absolute;
       top: -32px;
       bottom: 0;
       width: 1px;
       background: rgba(0, 125, 255, 1);
-      
       &-label {
         position: absolute;
         background: rgba(0, 125, 255, 1);
@@ -238,7 +235,6 @@ $left-width: 245px;
       }
     }
   }
-
   &__tooltip {
     position: absolute;
     width: 338px;
@@ -247,22 +243,70 @@ $left-width: 245px;
     border-radius: 8px;
     margin-left: -169px;
     z-index: 105;
-
     top: 0;
-    left: 0; 
-    
-
-    box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
-
+    left: 0;
+    box-shadow: 0 1px 16px 0 rgba(0, 44, 92, 0.28);
     &::after {
       content: " ";
       position: absolute;
-      bottom: 100%;  /* At the top of the tooltip */
+      bottom: 100%;
+      /* At the top of the tooltip */
       left: 50%;
       margin-left: -5px;
       border-width: 5px;
       border-style: solid;
       border-color: transparent transparent #fff transparent;
+    }
+  }
+  &__event-template {
+    text-align: left;
+    position: relative;
+    padding: 10px 16px;
+    box-sizing: border-box;
+
+    &-edit {
+      position: absolute;
+      right: 8px;
+      top: 8px;
+    }
+    
+    &-name {
+      font-size: 15px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 24px;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    &-info {
+      font-size: 13px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 17px;
+      margin-bottom: 16px;
+    }
+
+    &-users {
+      display: flex;
+      align-items: center;
+    }
+
+    &-user-icon {
+      content: url("userpic.jpg");
+      border-radius: 100%;
+    }
+
+    &-user-names {
+      margin-left: 8px;
+      font-size: 13px;
+      color: #000000;
+      letter-spacing: 0;
+      line-height: 17px;
+
+      &-other {
+        color: rgba(133,142,152,1);
+      }
     }
   }
 }
