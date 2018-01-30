@@ -9,9 +9,7 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "normalize.css": "^7.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "gulp": "^3.9.1",
