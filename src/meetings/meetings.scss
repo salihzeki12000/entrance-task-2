@@ -144,6 +144,7 @@ $left-width: 245px;
             border: none;
             top: 0;
             bottom: 0;
+            cursor: pointer;
 
             &_selected {
               background: rgba(153, 169, 185, 1);
@@ -190,6 +191,7 @@ $left-width: 245px;
             &:hover & {
               &-add {
                 display: block;
+                cursor: pointer;
               }
             }
           }
