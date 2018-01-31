@@ -1,0 +1,26 @@
+.layout {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: url("./1-главная.png") no-repeat;
+    z-index: 998;
+    opacity: 0.5;
+    pointer-events: none;
+    display: none;
+}
+
+.btn-show-layout {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 999;
+    background: orange;
+    &:hover {
+        background: darken(orange, 5);
+    }
+    &:active {
+        background: darken(orange, 10);
+    }
+}

@@ -1,7 +1,7 @@
 $start-h: 7;
-$start-m: 30;
+$start-m: 31;
 $end-h: 23;
-$end-m: 15;
+$end-m: 12;
 
 $total-m: ($end-h * 60 + $end-m) - ($start-h * 60 + $start-m);
 @function timeToRelativePos($h, $m) {
