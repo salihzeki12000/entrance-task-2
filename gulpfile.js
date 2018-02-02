@@ -6,10 +6,7 @@ var copyAssets = require("postcss-copy");
 var autoprefixer = require("autoprefixer");
 
 gulp.task("default", function() {
-  var processors = [
-    autoprefixer,
-    copyAssets({ dest: "build" })
-  ];
+  var processors = [autoprefixer, copyAssets({ dest: "build" })];
   return gulp
     .src("./src/**/*.scss")
     .pipe(sass().on("error", sass.logError))

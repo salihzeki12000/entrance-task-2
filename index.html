@@ -28,39 +28,35 @@
     </header>
 
     <div class="meetings">
-        <div class="meetings__timeline">
-            <div class="meetings__timeline-date">
+        <div class="meetings__header">
+            <div class="meetings__header-date">
                 <button class="round-button">
                     <i class="icon-arrow-left"></i>
                 </button>
-                <span class="meetings__timeline-date-curent">14 дек · Сегодня</span>
+                <span class="meetings__header-date-curent">14 дек · Сегодня</span>
                 <button class="round-button">
                     <i class="icon-arrow-right"></i>
                 </button>
             </div>
-            <!-- TODO: merge meetings__timeline-time and meetings__grid -->
-            <div class="meetings__timeline-time">
-                <span class="meetings__timeline-time-label meetings__timeline-time-label_past from_08-00">8:00</span>
-                <span class="meetings__timeline-time-label meetings__timeline-time-label_past from_09-00">9</span>
-                <span class="meetings__timeline-time-label meetings__timeline-time-label_past from_10-00">10</span>
-                <span class="meetings__timeline-time-label meetings__timeline-time-label_past from_11-00">11</span>
-                <span class="meetings__timeline-time-label from_12-00">12</span>
-                <span class="meetings__timeline-time-label from_13-00">13</span>
-                <span class="meetings__timeline-time-label from_14-00">14</span>
-                <span class="meetings__timeline-time-label from_15-00">15</span>
-                <span class="meetings__timeline-time-label from_16-00">16</span>
-                <span class="meetings__timeline-time-label from_17-00">17</span>
-                <span class="meetings__timeline-time-label from_18-00">18</span>
-                <span class="meetings__timeline-time-label from_19-00">19</span>
-                <span class="meetings__timeline-time-label from_20-00">20</span>
-                <span class="meetings__timeline-time-label from_21-00">21</span>
-                <span class="meetings__timeline-time-label from_22-00">22</span>
-                <span class="meetings__timeline-time-label from_23-00">23</span>
+            <!-- TODO: merge meetings__header-time and meetings__grid -->
+            <div class="meetings__header-time">
+                <span class="meetings__header-time-label meetings__header-time-label_past from_08-00">8:00</span>
+                <span class="meetings__header-time-label meetings__header-time-label_past from_09-00">9</span>
+                <span class="meetings__header-time-label meetings__header-time-label_past from_10-00">10</span>
+                <span class="meetings__header-time-label meetings__header-time-label_past from_11-00">11</span>
+                <span class="meetings__header-time-label from_12-00">12</span>
+                <span class="meetings__header-time-label from_13-00">13</span>
+                <span class="meetings__header-time-label from_14-00">14</span>
+                <span class="meetings__header-time-label from_15-00">15</span>
+                <span class="meetings__header-time-label from_16-00">16</span>
+                <span class="meetings__header-time-label from_17-00">17</span>
+                <span class="meetings__header-time-label from_18-00">18</span>
+                <span class="meetings__header-time-label from_19-00">19</span>
+                <span class="meetings__header-time-label from_20-00">20</span>
+                <span class="meetings__header-time-label from_21-00">21</span>
+                <span class="meetings__header-time-label from_22-00">22</span>
+                <span class="meetings__header-time-label from_23-00">23</span>
             </div>
-        </div>
-        <div class="meetings__background">
-            <div class="meetings__background-left"></div>
-            <div class="meetings__background-right"></div>
         </div>
         <div class="meetings__grid">
             <div class="meetings__grid-line from_08-00"></div>
@@ -292,7 +288,7 @@
             </div>
         </div>
 
-        <div id="myTemplate">
+        <div id="myTemplate" style="display: none">
             <div class="meetings__event-template">
                 <button class="round-button meetings__event-template-edit">
                     <i class="icon-edit"></i>

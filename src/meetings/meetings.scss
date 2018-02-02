@@ -1,18 +1,33 @@
 @import "../common.scss";
 
-$timeline-height: 46px;
+$header-height: 46px;
 $left-width: 245px;
 
 .meetings {
   height: calc(100vh - #{$header-height});
   position: relative;
   font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
-
-  &__timeline {
-    height: $timeline-height;
+  background: #f6f7f9;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: $left-width;
+    top: 0;
+    bottom: 0;
     background: #fff;
-    box-shadow: 0 -1px 0 0 #e9ecef;
+    border-right: 1px solid #e9ecef;
+    box-sizing: border-box;
+  }
+
+  &__header {
+    height: $header-height;
+    background: #fff;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+    box-sizing: border-box;
     display: flex;
+    position: relative;
 
     &-date {
       width: $left-width;
@@ -51,31 +66,9 @@ $left-width: 245px;
     }
   }
 
-  &__background {
-    position: absolute;
-    top: $timeline-height;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    box-shadow: 0 -1px 0 0 #e9ecef;
-    z-index: 100;
-
-    &-left {
-      background: #fff;
-      width: $left-width;
-      box-shadow: inset -1px 0 0 0 #e9ecef;
-    }
-
-    &-right {
-      background: #f6f7f9;
-      flex-grow: 1;
-    }
-  }
-
   &__body {
     position: absolute;
-    top: $timeline-height;
+    top: $header-height;
     left: 0;
     right: 0;
     bottom: 0;
@@ -92,9 +85,7 @@ $left-width: 245px;
         font-weight: bold;
         line-height: 13px;
         color: #858e98;
-        width: $left-width;
         padding-left: 25px;
-        box-sizing: border-box;
         margin-bottom: 4px;
       }
       &-room {
@@ -102,7 +93,6 @@ $left-width: 245px;
         align-items: center;
         margin-bottom: 8px;
 
-        //&_selected &
         &:hover & {
           &-info-name {
             color: rgba(0, 112, 224, 1);
@@ -118,19 +108,20 @@ $left-width: 245px;
         &-info {
           width: $left-width;
           padding-left: 25px;
+          padding-top: 4px;
+          padding-bottom: 4px;
           box-sizing: border-box;
           color: #000;
-
+          
           &-name {
             font-size: 15px;
             font-weight: bold;
             line-height: 17px;
-            margin-top: 4px;
+            margin-bottom: 2px;
           }
           &-capacity {
             font-size: 13px;
             line-height: 17px;
-            margin-bottom: 4px;
           }
         }
         &-events {
@@ -201,7 +192,7 @@ $left-width: 245px;
   }
   &__grid {
     position: absolute;
-    top: $timeline-height;
+    top: $header-height;
     left: $left-width;
     bottom: 0;
     right: 0;
