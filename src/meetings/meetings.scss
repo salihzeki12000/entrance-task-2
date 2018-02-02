@@ -1,6 +1,6 @@
 @import "../common.scss";
 
-$header-height: 46px;
+$meetings-header-height: 46px;
 $left-width: 245px;
 
 .meetings {
@@ -21,7 +21,7 @@ $left-width: 245px;
   }
 
   &__header {
-    height: $header-height;
+    height: $meetings-header-height;
     background: #fff;
     border-top: 1px solid #e9ecef;
     border-bottom: 1px solid #e9ecef;
@@ -68,7 +68,7 @@ $left-width: 245px;
 
   &__body {
     position: absolute;
-    top: $header-height;
+    top: $meetings-header-height;
     left: 0;
     right: 0;
     bottom: 0;
@@ -192,7 +192,7 @@ $left-width: 245px;
   }
   &__grid {
     position: absolute;
-    top: $header-height;
+    top: $meetings-header-height;
     left: $left-width;
     bottom: 0;
     right: 0;
